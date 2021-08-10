@@ -14,3 +14,14 @@ jobs:
         uses: actions/setup-node@v2.4.0
       - name: my stuff lol
         run: ./temp.sh    
+  example:
+    name: sample comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: comment PR
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: "Iz you Happy Owen"
+          check_for_duplicate_msg: false  # OPTIONAL 
