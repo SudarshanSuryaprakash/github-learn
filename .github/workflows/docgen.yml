@@ -1,0 +1,10 @@
+name: Document Generation
+on:
+  push:
+    branches:
+      -master
+jobs:
+   docgen:
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "yooo"
