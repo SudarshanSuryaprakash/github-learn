@@ -8,7 +8,9 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - uses: actions/checkout@v2
-       - run: yarn docgen
+       - run: | 
+          touch works.txt
+          echo "from yml" > works.txt
        - name: Create pull request
          uses: peter-evans/create-pull-request@v3
          with:
