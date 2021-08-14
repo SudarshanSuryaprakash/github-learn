@@ -1,7 +1,8 @@
 name: Document Generation
 on:
   push:
-    branches: [master]
+    branches: 
+      - master
 jobs:
    docgen:
      runs-on: ubuntu-latest
