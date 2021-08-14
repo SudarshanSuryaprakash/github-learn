@@ -8,7 +8,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - uses: actions/checkout@vs
-         run: touch works.txt
+       - run: touch works.txt
        - name: Create pull request
          uses: peter-evans/create-pull-request@v3
          with:
