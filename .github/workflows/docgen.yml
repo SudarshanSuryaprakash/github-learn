@@ -7,5 +7,4 @@ jobs:
    docgen:
      runs-on: ubuntu-latest
      steps:
-       - name: generate docs
          run: echo "yooo"
