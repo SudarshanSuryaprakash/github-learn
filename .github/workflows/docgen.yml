@@ -7,4 +7,4 @@ jobs:
    docgen:
      runs-on: ubuntu-latest
      steps:
-         run: echo "yooo"
+       - run: echo "yooo"
