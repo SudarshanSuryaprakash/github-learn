@@ -4,7 +4,14 @@ on:
     branches: 
       - master
 jobs:
-   docgen:
+   docgen_and_pull_req:
      runs-on: ubuntu-latest
      steps:
-       - run: touch works.txt
+       - uses: actions/checkout@vs
+         run: touch works.txt
+       - name: Create pull request
+         uses: peter-evans/create-pull-request@v3
+         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Adding Docs through yarn docgen
+          title: YARN DOCGEN
